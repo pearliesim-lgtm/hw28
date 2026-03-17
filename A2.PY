@@ -1,23 +1,16 @@
-from abc import ABC,abstractmethod 
-class Animal(ABC):
-    def move(self):
-        pass
+class computer:
+    def __init__(self):
+        self.__maxprice=90000
 
-class Human(Animal):
-    def move(self):
-        print("Ican walk and run")
+    def sell(self):
+        print("Selling Price:{}".format(self.__maxprice))
 
-class Snake(Animal):
-    def move(self):
-        print("I can crawl")
+    def setmaxprice(self,price):
+        self.__maxprice=price
 
-class Dog(Animal):
-    def move(self):
-        print("I can walk and run")
-
-H=Human()
-H.move()
-S=Snake()
-S.move()
-D=Dog()
-D.move()
+c=computer()
+c.sell()
+c.__maxprice=50000
+c.sell()
+c.setmasprice(100000)
+c.sell()

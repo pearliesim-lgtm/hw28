@@ -1,17 +1,12 @@
-from abc import ABC,abstractmethod
+class myclass:
+    __privatevar=27;
 
-class Absclass(ABC):
-    def print(self,x):
-        print("Passed value:",x)
+    def __privmeth(self):
+        print("I'm inside class myclass")
 
-    @abstractmethod
-    def task(self):
-        print("We are iside Absclass task")
+        def hello(self):
+            print("Private Variable value:",myclass.__privatevar)
 
-class test_class(Absclass):
-    def task(self):
-        print("We are inside test_class task")
-
-test_obj=test_class()
-test_obj.task()
-test_obj.print(100)
+foo=myclass()
+foo.hello()
+foo.__privmeth
